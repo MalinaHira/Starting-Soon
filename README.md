@@ -7,7 +7,7 @@ Ein selbst erstelltes Starting Soon Overlay für OBS im Sakura-/Anime-Stil.
 - Animierter Hintergrund
 - Leuchteffekte
 - OBS-kompatibles Layout
-- HTML, CSS und JavaScript umgesetzt
+- HTML, CSS 
 
 ## 🛠️ Verwendete Technologien
 

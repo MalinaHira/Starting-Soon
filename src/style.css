@@ -1,0 +1,161 @@
+/* Grundaufbau für den Vollbildmodus */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #0b0b0f; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif; 
+   flex-direction: column; /*Für die Balken, damit die unter der Schrift sind*/
+}
+
+/* Container, der den Text genau in die Mitte setzt */
+.container {
+    z-index: 2; /* Text liegt über dem Leuchten */
+    text-align: center;
+}
+
+/* Dein Neon-Text mit Optimierung für flüssige Animationen */
+.neon-text {
+    font-size: 4rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    will-change: transform, text-shadow;
+    transform: translateZ(0); 
+    
+    text-shadow: 
+        0 0 10px #ff73b3,
+        0 0 20px #ff73b3,
+        0 0 40px #ff73b3;
+    animation: pulseText 3s ease-in-out infinite alternate;
+}
+
+/* Das Hintergrundleuchten (basierend auf deiner Idee im Screenshot) */
+.background-glow {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, #ff73b3 0%, rgba(0,0,0,0) 70%);
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.4;
+    z-index: 1;
+    animation: floatGlow 8s ease-in-out infinite alternate;
+}
+
+/* --- ANIMATIONEN --- */
+
+/* Text pulsiert leicht */
+@keyframes pulseText {
+    from {
+        transform: scale(0.98);
+        text-shadow: 0 0 10px #ff73b3, 0 0 20px #ff73b3, 0 0 40px #ff73b3;
+    }
+    to {
+        transform: scale(1.02);
+        text-shadow: 0 0 15px #ff73b3, 0 0 30px #ff73b3, 0 0 60px #ff73b3, 0 0 100px #ff73b3;
+    }
+}
+
+/* Hintergrundlicht bewegt sich sanft */
+@keyframes floatGlow {
+    0% {
+        transform: translate(-50px, -50px) scale(1);
+    }
+    100% {
+        transform: translate(50px, 50px) scale(1.2);
+    }
+}
+
+.audio-visualizer{
+  display: flex;
+  justif-content:center;
+  align-items: flex-end;
+  height:  60px;
+  gap: 4px;
+  margin-top: 30px;
+}
+.audio-visualizer span {
+    display: inline-block;     /* WICHTIG: Erlaubt feste Breiten und Höhen */
+    width: 4px;               /* Wie breit jeder einzelne Balken ist */
+    height: 35px;             /* Die Start-Höhe der Balken */
+    background-color: #ff73b3; /* Die Farbe der Balken */
+    border-radius: 2px;       /* Macht die Spitzen leicht rund */
+    
+    /* Falls du die Animation schon hast, kommt sie hier hin: */
+    animation: pulsieren 1.2s ease-in-out infinite alternate;
+}
+/* Styling für unsere Kirschblüte oben links */
+.sakura-top-left {
+    position: absolute;  /* Löst das Bild vom restlichen Text, es "schwebt" */
+    
+    /* Wo soll es festgepinnt werden? */
+    top: 0;             /* Ganz oben am Bildschirmrand */
+    left: 0;            /* Ganz links am Bildschirmrand */
+    
+    /* Wie groß soll es sein? */
+    width: 250px;       /* Ändere diesen Wert, um die Blüte größer oder kleiner zu machen */
+    height: auto;       /* Sorgt dafür, dass das Bild nicht verzerrt wird */
+    
+    opacity: 0.8;       /* Leicht transparent (1 ist voll sichtbar, 0 ist unsichtbar) */
+    z-index: 1;         /* Bestimmt die Ebene: Niedrige Zahlen sind im Hintergrund */
+}
+/* Wir taufen das Drehbuch "pulsieren" */
+@keyframes pulsieren {
+    0% {
+        height: 15px;  /* So klein startet der Balken */
+    }
+    100% {
+        height: 60px;  /* So groß wird er am höchsten Punkt */
+    }
+}
+/* Gruppe 1: Balken 1, 8, 15, 22 (Sehr schnell und nervös) */
+.audio-visualizer span:nth-child(7n+1) {
+    animation-delay: 0.15s;
+    animation-duration: 0.6s;
+}
+
+/* Gruppe 2: Balken 2, 9, 16, 23 (Gemütlicher, tiefer Bass-Vibe) */
+.audio-visualizer span:nth-child(7n+2) {
+    animation-delay: 0.6s;
+    animation-duration: 1.5s;
+}
+
+/* Gruppe 3: Balken 3, 10, 17, 24 (Hektischer Ausreißer) */
+.audio-visualizer span:nth-child(7n+3) {
+    animation-delay: 0.05s;
+    animation-duration: 0.75s;
+}
+
+/* Gruppe 4: Balken 4, 11, 18, 25 (Standard-Rhythmus) */
+.audio-visualizer span:nth-child(7n+4) {
+    animation-delay: 0.4s;
+    animation-duration: 1.1s;
+}
+
+/* Gruppe 5: Balken 5, 12, 19, 26 (Zieht extrem nach) */
+.audio-visualizer span:nth-child(7n+5) {
+    animation-delay: 0.9s;
+    animation-duration: 1.3s;
+}
+
+/* Gruppe 6: Balken 6, 13, 20, 27 (Mittelschnell) */
+.audio-visualizer span:nth-child(7n+6) {
+    animation-delay: 0.25s;
+    animation-duration: 0.95s;
+}
+
+/* Gruppe 7: Balken 7, 14, 21, 28 (Gegenrhythmus) */
+.audio-visualizer span:nth-child(7n+7) {
+    animation-delay: 0.5s;
+    animation-duration: 0.8s;
+}

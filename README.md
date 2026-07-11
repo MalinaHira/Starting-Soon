@@ -1,6 +1,6 @@
 # 🌸 Starting Soon Overlay
 
-Ein selbst erstelltes Starting Soon Overlay für OBS im Sakura-/Anime-Stil.
+Ein selbst erstelltes Starting Soon Overlay für OBS im Sakura Stil
 
 ## ✨ Features
 
@@ -22,4 +22,4 @@ Ein selbst erstelltes Starting Soon Overlay für OBS im Sakura-/Anime-Stil.
 
 ## 📚 Über dieses Projekt
 
-Dieses Projekt entstand, um meine Kenntnisse in Webentwicklung zu verbessern und erste Erfahrungen mit Frontend-Entwicklung und Git/GitHub zu sammeln.
+Dieses Projekt entstand, da ich mich im Programiern und Coden probieren wollte. 

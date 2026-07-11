@@ -1,6 +1,24 @@
-# Untitled
+# 🌸 Starting Soon Overlay
 
-A Pen created on CodePen.
+Ein selbst erstelltes Starting Soon Overlay für OBS im Sakura-/Anime-Stil.
 
-Original URL: [https://codepen.io/editor/Malina-Joosten/pen/019f41b1-cd7d-7731-9eb6-3c4c8b334705](https://codepen.io/editor/Malina-Joosten/pen/019f41b1-cd7d-7731-9eb6-3c4c8b334705).
+## ✨ Features
 
+- Animierter Hintergrund
+- Leuchteffekte
+- OBS-kompatibles Layout
+- HTML, CSS und JavaScript umgesetzt
+
+## 🛠️ Verwendete Technologien
+
+- HTML
+- CSS
+- JavaScript
+
+## 📸 Vorschau
+
+(Füge hier später einen Screenshot ein)
+
+## 📚 Über dieses Projekt
+
+Dieses Projekt entstand, um meine Kenntnisse in Webentwicklung zu verbessern und erste Erfahrungen mit Frontend-Entwicklung und Git/GitHub zu sammeln.

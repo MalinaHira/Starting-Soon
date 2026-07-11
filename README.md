@@ -13,7 +13,7 @@ Ein selbst erstelltes Starting Soon Overlay für OBS im Sakura-/Anime-Stil.
 
 - HTML
 - CSS
-- JavaScript
+
 
 ## 📸 Vorschau
 

@@ -17,7 +17,8 @@ Ein selbst erstelltes Starting Soon Overlay für OBS im Sakura-/Anime-Stil.
 
 ## 📸 Vorschau
 
-(Füge hier später einen Screenshot ein)
+<img width="1912" height="905" alt="image" src="https://github.com/user-attachments/assets/44c2e0c4-f462-4b56-a044-404c08180e59" />
+
 
 ## 📚 Über dieses Projekt
 
